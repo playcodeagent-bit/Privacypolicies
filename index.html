@@ -2,274 +2,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" sizes="32x32" href="logo.png">
+    <link rel="icon" sizes="32x32" href="https://i.ibb.co/Pz9JyMxy/Chat-GPT-Image-Feb-13-2026-07-26-56-PM.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Privacy Policy | PlayCode Enterprise</title>
+    <title>Privacy Policy | GOOGLE PLAYCODE</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Google+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* --- GOOGLE MATERIAL 3 DARK THEME --- */
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* --- GOOGLE DARK THEME (Colorful AI Edition) --- */
         :root {
-            --md-sys-color-background: #090a0f; 
-            --md-sys-color-surface: #1E1F20;
-            --md-sys-color-surface-variant: #444746;
-            --md-text-main: #E3E3E3;
-            --md-text-muted: #9AA0A6;
+            /* Deep Dark Grey Tones */
+            --google-bg: #131314; 
+            --google-surface: #1E1F22;
+            --google-surface-hover: #282A2C;
+            --google-text: #E3E3E3;
+            --google-text-muted: #C4C7C5;
             
-            --jio-blue: #0F3CB0;
-            --google-blue: #4285F4;
-            --google-red: #EA4335;
-            --google-yellow: #FBBC05;
-            --google-cyan: #00C6FF;
-            --google-green: #34A853;
+            /* AI Colorful Accents */
+            --google-accent-blue: #8AB4F8;
+            --google-accent-purple: #C58AF9;
+            --google-accent-cyan: #24C1E0;
             
-            /* Background opacity slightly increased since blur is removed for lag fix */
-            --glass-bg: rgba(25, 25, 26, 0.8); 
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --glass-highlight: rgba(255, 255, 255, 0.12);
-            --shadow-elevation: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+            /* Brand Colors */
+            --g-blue: #4285F4;
+            --g-red: #EA4335;
+            --g-yellow: #FBBC05;
+            --g-green: #34A853;
+
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --panel-border-hover: rgba(255, 255, 255, 0.15);
             
             --font-display: 'Google Sans', sans-serif;
             --font-base: 'Inter', sans-serif;
             
-            --transition-smooth: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --z-modal: 1000;
         }
 
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-            font-family: var(--font-base); 
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-base); }
         
         body {
-            background-color: var(--md-sys-color-background);
-            color: var(--md-text-main);
+            background-color: var(--google-bg);
+            /* Gemini-style vivid glowing auras in the background */
+            background-image: 
+                radial-gradient(circle at 15% 0%, rgba(66, 133, 244, 0.18) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(197, 138, 249, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(36, 193, 224, 0.08) 0%, transparent 60%);
+            background-attachment: fixed;
+            color: var(--google-text);
             min-height: 100vh;
             overflow-x: hidden;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--md-sys-color-background); }
-        ::-webkit-scrollbar-thumb { background: var(--md-sys-color-surface-variant); border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: var(--google-bg); }
+        ::-webkit-scrollbar-thumb { background: var(--google-surface-hover); border-radius: 10px; }
 
-        /* --- INNOVATIVE JIO-GOOGLE MESH & FLOATING LOGOS --- */
-        .ambient-wrapper {
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100vw; 
-            height: 100vh; 
-            z-index: -1; 
-            overflow: hidden; 
-            pointer-events: none;
-            background: #090a0f;
+        @keyframes coinFlip {
+            0% { transform: perspective(600px) rotateY(0deg); }
+            100% { transform: perspective(600px) rotateY(360deg); }
         }
-        
-        .glow-orb {
-            position: absolute; 
-            border-radius: 50%; 
-            opacity: 0.4;
-            animation: floatMesh 20s infinite alternate ease-in-out;
-            transform-origin: center center;
-            mix-blend-mode: screen;
-        }
-
-        .glow-orb.jio { width: 55vw; height: 55vw; background: radial-gradient(circle, rgba(15,60,176,0.35) 0%, transparent 70%); top: -20%; left: -10%; }
-        .glow-orb.g-blue { width: 45vw; height: 45vw; background: radial-gradient(circle, rgba(66,133,244,0.3) 0%, transparent 70%); bottom: -10%; right: -10%; animation-delay: -5s; animation-duration: 25s; }
-        .glow-orb.g-red { width: 40vw; height: 40vw; background: radial-gradient(circle, rgba(234,67,53,0.2) 0%, transparent 70%); top: 20%; right: 10%; animation-delay: -12s; }
-        .glow-orb.g-cyan { width: 35vw; height: 35vw; background: radial-gradient(circle, rgba(0,198,255,0.15) 0%, transparent 70%); bottom: 20%; left: 15%; animation-delay: -8s; }
-
-        .floating-logo {
-            position: absolute; 
+        .flip-logo-anim {
+            animation: coinFlip 4s infinite linear;
             border-radius: 50%;
-            filter: grayscale(100%) opacity(0.04) brightness(1.5);
-            pointer-events: none; 
-            z-index: 0;
-        }
-        
-        .fl-1 { width: 140px; top: 15%; left: 8%; animation: floatLogo 35s infinite linear; }
-        .fl-2 { width: 90px; top: 65%; left: 85%; animation: floatLogo 40s infinite linear reverse; }
-        .fl-3 { width: 180px; top: 75%; left: 15%; animation: floatLogo 45s infinite linear; }
-        .fl-4 { width: 110px; top: 25%; left: 75%; animation: floatLogo 30s infinite linear reverse; }
-
-        @media (max-width: 768px) {
-            .glow-orb { opacity: 0.5; }
-            .glow-orb.jio { width: 100vw; height: 100vw; top: -30%; left: -20%; }
-            .glow-orb.g-blue { width: 90vw; height: 90vw; bottom: -20%; right: -20%; }
-            .glow-orb.g-red { width: 80vw; height: 80vw; top: 10%; right: -30%; opacity: 0.25; }
-            .glow-orb.g-cyan { display: none; }
-            .floating-logo { opacity: 0.02; }
-            .fl-3, .fl-4 { display: none; }
-        }
-        
-        @keyframes floatMesh {
-            0% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(4vw, 6vh) scale(1.05); }
-            66% { transform: translate(-3vw, 4vh) scale(0.95); }
-            100% { transform: translate(2vw, -5vh) scale(1.1); }
         }
 
-        @keyframes floatLogo {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -40px) rotate(120deg); }
-            66% { transform: translate(-20px, 30px) rotate(240deg); }
-            100% { transform: translate(0, 0) rotate(360deg); }
+        /* --- MINIMAL HEADER --- */
+        .top-header {
+            position: absolute; top: 0; left: 0; width: 100%; z-index: 100;
+            padding: 24px 40px; display: flex; justify-content: space-between; align-items: center;
         }
-
-        /* --- GLASS PANELS (BLUR REMOVED) --- */
-        .glass-panel {
-            background: var(--glass-bg); 
-            /* Blur removed here to fix Chrome lag */
-            border: 1px solid var(--glass-border); 
-            border-top: 1px solid var(--glass-highlight);
-            border-radius: 24px; 
-            box-shadow: var(--shadow-elevation);
-        }
-
-        /* --- HEADER (BLUR REMOVED) --- */
-        .main-header {
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            z-index: 100;
-            background: rgba(9, 10, 15, 0.9); /* Opacity increased since blur is gone */
-            border-bottom: 1px solid var(--glass-border); 
-            transition: var(--transition-smooth);
-        }
+        .brand-logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .google-g-logo { height: 26px; object-fit: contain; }
+        .playcode-logo { height: 26px; border-radius: 50%; object-fit: contain; }
         
-        .header-content { 
-            max-width: 1400px; 
-            margin: 0 auto; 
-            padding: 16px 32px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+        /* Outline Support Button */
+        .support-btn-outline {
+            background: transparent; color: var(--google-text);
+            border: 1px solid var(--panel-border);
+            padding: 8px 20px; border-radius: 100px;
+            font-family: var(--font-display); font-size: 13px; font-weight: 500;
+            cursor: pointer; transition: var(--transition-smooth);
         }
-        
-        .brand-logo { 
-            display: flex; 
-            align-items: center; 
-            gap: 16px; 
-            text-decoration: none; 
-            color: inherit; 
-            cursor: pointer; 
-        }
-        
-        .logo-badge { 
-            display: flex; 
-            align-items: center; 
-            gap: 10px; 
-            background: rgba(255,255,255,0.04); 
-            padding: 6px 16px 6px 6px; 
-            border-radius: 100px; 
-            border: 1px solid var(--glass-border); 
-            transition: var(--transition-smooth); 
-        }
-        
-        .logo-badge:hover { 
-            background: rgba(255,255,255,0.08); 
-            border-color: rgba(66,133,244,0.4); 
-        }
-        
-        .jio-logo { 
-            height: 32px; 
-            border-radius: 50%; 
-            object-fit: contain; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.4); 
-        }
-        
-        .logo-text { 
-            font-family: var(--font-display); 
-            font-size: 20px; 
-            font-weight: 700; 
-            color: #FFFFFF; 
-            letter-spacing: -0.5px; 
-        }
-        
-        .cta-button {
-            display: inline-flex; 
-            align-items: center; 
-            gap: 12px; 
-            padding: 18px 40px;
-            background: #FFFFFF; 
-            color: #000000;
-            border: none; 
-            border-radius: 100px; 
-            font-family: var(--font-display); 
-            font-size: 16px; 
-            font-weight: 700;
-            cursor: pointer; 
-            transition: var(--transition-smooth); 
-            box-shadow: 0 8px 24px rgba(66, 133, 244, 0.15), inset 0 -2px 0 rgba(0,0,0,0.1);
-        }
-        
-        .cta-button:hover { 
-            transform: translateY(-4px) scale(1.02); 
-            box-shadow: 0 12px 32px rgba(66, 133, 244, 0.3); 
-        }
+        .support-btn-outline:hover { background: rgba(255,255,255,0.05); border-color: var(--panel-border-hover); }
 
         /* --- POLICY HERO --- */
         .policy-hero { 
-            padding: 160px 24px 60px; 
+            padding: 140px 24px 40px; 
             text-align: center; 
             position: relative; 
             z-index: 1; 
         }
         
-        .hero-badge {
-            display: inline-flex; 
-            align-items: center; 
-            gap: 8px; 
-            padding: 8px 24px;
-            border-radius: 100px; 
-            font-size: 13px; 
-            font-weight: 600; 
-            font-family: var(--font-display);
-            color: var(--google-blue); 
-            margin-bottom: 24px; 
-            border: 1px solid rgba(66, 133, 244, 0.2);
-            background: rgba(66, 133, 244, 0.08);
-            animation: fadeUp 0.8s ease forwards;
+        .welcome-badge {
+            display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px;
+            border-radius: 100px; font-size: 13px; font-weight: 600; font-family: var(--font-display);
+            color: var(--google-accent-blue); margin-bottom: 24px; 
+            background: rgba(138, 180, 248, 0.08);
+            border: 1px solid rgba(138, 180, 248, 0.15);
+            animation: fadeUp 0.8s ease forwards; opacity: 0; transform: translateY(20px);
+            letter-spacing: 0.5px;
         }
 
-        .hero-title {
-            font-family: var(--font-display); 
-            font-size: 56px; 
-            font-weight: 800; 
-            line-height: 1.15; 
-            margin-bottom: 16px;
-            letter-spacing: -1.5px; 
-            animation: fadeUp 0.8s ease 0.2s forwards; 
-            opacity: 0; 
-            fill-mode: forwards;
+        .welcome-title {
+            font-family: var(--font-display); font-size: 56px; font-weight: 500; line-height: 1.15; margin-bottom: 16px;
+            letter-spacing: -0.5px; animation: fadeUp 0.8s ease 0.2s forwards; opacity: 0; transform: translateY(20px);
+            color: var(--google-text);
         }
         
-        .hero-title span {
-            background: linear-gradient(110deg, #4285F4 0%, #00C6FF 40%, #FFFFFF 100%);
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            background-clip: text;
+        /* Bright AI Gradient Text */
+        .welcome-title span {
+            background: linear-gradient(90deg, var(--google-accent-blue), var(--google-accent-cyan), var(--google-accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero-subtitle {
-            font-size: 18px; 
-            color: var(--md-text-muted); 
-            max-width: 600px; 
-            margin: 0 auto; 
-            line-height: 1.6;
-            animation: fadeUp 0.8s ease 0.4s forwards; 
-            opacity: 0; 
-            font-weight: 300;
+        .welcome-subtitle {
+            font-size: 16px; color: var(--google-text-muted); max-width: 600px; margin: 0 auto 48px; line-height: 1.6;
+            animation: fadeUp 0.8s ease 0.4s forwards; opacity: 0; transform: translateY(20px);
+            font-weight: 400;
         }
 
-        /* --- POLICY CONTENT GRID --- */
+        /* --- POLICY CONTENT --- */
         .policy-container {
             max-width: 900px; 
             margin: 0 auto; 
@@ -281,15 +142,17 @@
         }
 
         .policy-card { 
+            background: var(--google-surface); 
+            border: 1px solid var(--panel-border); 
+            border-radius: 24px; 
             padding: 48px; 
-            border-radius: 32px; 
-            margin-bottom: 40px; 
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
         }
 
         .section { 
             margin-bottom: 48px; 
             padding-bottom: 40px; 
-            border-bottom: 1px solid rgba(255,255,255,0.05); 
+            border-bottom: 1px solid var(--panel-border); 
         }
         
         .section:last-child { 
@@ -300,53 +163,45 @@
 
         .section-title {
             font-family: var(--font-display); 
-            font-size: 28px; 
-            font-weight: 700; 
-            color: #FFFFFF;
+            font-size: 24px; 
+            font-weight: 500; 
+            color: var(--google-text);
             margin-bottom: 24px; 
-            letter-spacing: -0.5px; 
+            letter-spacing: -0.3px; 
             display: flex; 
             align-items: center; 
             gap: 12px;
         }
         
         .title-icon {
-            width: 40px; 
-            height: 40px; 
-            border-radius: 12px; 
-            background: rgba(255,255,255,0.05);
+            width: 44px; 
+            height: 44px; 
+            border-radius: 50%; 
+            background: var(--google-surface-hover);
             display: grid; 
             place-items: center; 
-            border: 1px solid rgba(255,255,255,0.08); 
-            color: var(--google-blue);
+            border: 1px solid var(--panel-border); 
+            color: var(--google-accent-blue);
         }
 
-        h3 { 
-            color: #8ab4f8; 
-            margin: 24px 0 12px; 
-            font-size: 18px; 
-            font-weight: 600; 
-            font-family: var(--font-display); 
-        }
-        
         p { 
             margin-bottom: 16px; 
-            color: var(--md-text-main); 
-            font-weight: 300; 
-            font-size: 16px; 
+            color: var(--google-text-muted); 
+            font-weight: 400; 
+            font-size: 15px; 
             line-height: 1.7; 
         }
         
         ul, ol { 
             margin-left: 24px; 
             margin-bottom: 16px; 
-            color: var(--md-text-main); 
-            font-weight: 300; 
+            color: var(--google-text-muted); 
+            font-weight: 400; 
+            font-size: 15px;
         }
         
-        li { 
-            margin-bottom: 12px; 
-        }
+        li { margin-bottom: 12px; }
+        strong { color: var(--google-text); font-weight: 600; }
 
         /* Custom Alert Boxes */
         .info-box, .warning-box {
@@ -356,90 +211,47 @@
             display: flex; 
             flex-direction: column; 
             gap: 8px;
-            background: rgba(0,0,0,0.3); 
-            border: 1px solid var(--glass-border);
+            border: 1px solid var(--panel-border);
+            background: var(--google-bg);
         }
         
-        .info-box { border-left: 4px solid var(--google-blue); }
-        .info-box .box-header { color: var(--google-blue); font-weight: 600; display: flex; align-items: center; gap: 8px; font-family: var(--font-display); }
+        .info-box { border-left: 4px solid var(--google-accent-blue); }
+        .info-box .box-header { color: var(--google-accent-blue); font-weight: 500; display: flex; align-items: center; gap: 8px; font-family: var(--font-display); }
         
-        .warning-box { border-left: 4px solid var(--google-red); }
-        .warning-box .box-header { color: var(--google-red); font-weight: 600; display: flex; align-items: center; gap: 8px; font-family: var(--font-display); }
+        .warning-box { border-left: 4px solid var(--g-red); }
+        .warning-box .box-header { color: var(--g-red); font-weight: 500; display: flex; align-items: center; gap: 8px; font-family: var(--font-display); }
 
         .country-tag {
-            background: rgba(255,255,255,0.05); 
-            border: 1px solid rgba(255,255,255,0.1);
+            background: var(--google-surface-hover); 
+            border: 1px solid var(--panel-border);
+            color: var(--google-text);
             padding: 6px 16px; 
             border-radius: 100px; 
-            font-size: 14px; 
+            font-size: 13px; 
             display: inline-block; 
             margin: 4px;
+            font-weight: 500;
         }
 
         .highlight {
-            background: rgba(66, 133, 244, 0.15); 
-            color: #8ab4f8;
+            background: rgba(138, 180, 248, 0.1); 
+            color: var(--google-accent-blue);
             padding: 2px 8px; 
             border-radius: 6px; 
             font-weight: 600;
+            border: 1px solid rgba(138, 180, 248, 0.2);
         }
 
         /* --- FOOTER --- */
-        .main-footer { 
-            border-top: 1px solid var(--glass-border); 
-            padding: 80px 24px 40px; 
-            background: rgba(0,0,0,0.6); 
-            position: relative; 
-            z-index: 1; 
-        }
+        .main-footer { padding: 40px 24px; background: transparent; border-top: 1px solid var(--panel-border); }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 16px; text-align: center; }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { color: var(--google-text-muted); text-decoration: none; transition: 0.2s; font-weight: 400; font-size: 13px; }
+        .footer-links a:hover { color: var(--google-text); }
         
-        .footer-content { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            display: flex; 
-            justify-content: space-between; 
-            flex-wrap: wrap; 
-            gap: 40px; 
-        }
-        
-        .footer-links a { 
-            color: var(--md-text-muted); 
-            text-decoration: none; 
-            transition: 0.2s; 
-            display: block; 
-            margin-bottom: 12px; 
-            font-weight: 300; 
-        }
-        
-        .footer-links a:hover { 
-            color: #FFFFFF; 
-            padding-left: 4px; 
-        }
-
         /* --- ANIMATIONS --- */
-        .page-transition { 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background: #090a0f; 
-            z-index: var(--z-modal); 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            opacity: 1; 
-            pointer-events: none; 
-            animation: fadeOut 0.8s 0.8s forwards; 
-        }
-        
-        .transition-logo { 
-            width: 100px; 
-            border-radius: 20px; 
-            transform: scale(0.1); 
-            opacity: 0; 
-            animation: logoReveal 0.8s 0.2s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-        }
+        .page-transition { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--google-bg); z-index: calc(var(--z-modal) + 10); display: flex; justify-content: center; align-items: center; opacity: 1; pointer-events: none; animation: fadeOut 0.8s 0.8s forwards; }
+        .transition-logo { width: 100px; border-radius: 20px; transform: scale(0.1); opacity: 0; animation: logoReveal 0.8s 0.2s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
         @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
@@ -447,59 +259,47 @@
 
         /* --- RESPONSIVE FIXES --- */
         @media (max-width: 768px) {
-            .hero-title { font-size: 40px; }
-            .policy-card { padding: 32px 24px; }
-            .header-content { padding: 12px 20px; }
-            .footer-content { flex-direction: column; }
+            .top-header { padding: 20px; }
+            .policy-hero { padding: 100px 20px 40px; }
+            .welcome-title { font-size: 36px; }
+            .welcome-subtitle { font-size: 15px; }
+            .policy-card { padding: 32px 24px; border-radius: 20px; }
+            .section-title { font-size: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="ambient-wrapper">
-        <div class="glow-orb jio"></div>
-        <div class="glow-orb g-blue"></div>
-        <div class="glow-orb g-red"></div>
-        <div class="glow-orb g-cyan"></div>
-        
-        <img src="https://i.ibb.co/qL11nJmy/Chat-GPT-Image-Apr-22-2026-01-14-43-PM-1.png" class="floating-logo fl-1" alt="">
-        <img src="https://i.ibb.co/qL11nJmy/Chat-GPT-Image-Apr-22-2026-01-14-43-PM-1.png" class="floating-logo fl-2" alt="">
-        <img src="https://i.ibb.co/qL11nJmy/Chat-GPT-Image-Apr-22-2026-01-14-43-PM-1.png" class="floating-logo fl-3" alt="">
-        <img src="https://i.ibb.co/qL11nJmy/Chat-GPT-Image-Apr-22-2026-01-14-43-PM-1.png" class="floating-logo fl-4" alt="">
+    <div class="page-transition" id="pageTransition">
+        <img src="https://i.ibb.co/Pz9JyMxy/Chat-GPT-Image-Feb-13-2026-07-26-56-PM.png" alt="PlayCode" class="transition-logo flip-logo-anim">
     </div>
 
-    <div class="page-transition" id="pageTransition">
-        <img src="https://i.ibb.co/Pz9JyMxy/Chat-GPT-Image-Feb-13-2026-07-26-56-PM.png" alt="Google Play" class="transition-logo">
-    </div>
-    
-    <header class="main-header">
-        <div class="header-content">
-            <a href="https://playcodeindia.github.io/india/" class="brand-logo" id="homeLink">
-                <div class="logo-badge">
-                    <img src="https://i.ibb.co/qL11nJmy/Chat-GPT-Image-Apr-22-2026-01-14-43-PM-1.png" alt="Jio" class="jio-logo">
-                    <span class="logo-text">PlayCode</span>
-                </div>
-                <span style="font-size: 14px; color: var(--md-text-muted); font-weight: 500; display: none; @media(min-width: 400px){ display: inline;}">Enterprise</span>
-            </a>
-            <button id="contactBtn" class="cta-button" style="padding: 8px 20px; font-size: 14px; font-weight: 600; background: rgba(255,255,255,0.06); color: white; box-shadow: none; border: 1px solid rgba(255,255,255,0.1);">Support</button>
-        </div>
+    <header class="top-header" id="topHeader">
+        <a href="https://playcodeindia.github.io/india/" class="brand-logo-wrap">
+            <img src="https://pngimg.com/uploads/google/google_PNG19644.png" alt="Google" class="google-g-logo">
+            <span style="color: rgba(255,255,255,0.2);">|</span>
+            <img src="https://i.ibb.co/Pz9JyMxy/Chat-GPT-Image-Feb-13-2026-07-26-56-PM.png" alt="PlayCode" class="playcode-logo flip-logo-anim">
+        </a>
+        <button id="contactBtn" class="support-btn-outline">Support</button>
     </header>
 
     <section class="policy-hero">
-        <div class="hero-badge glass-panel" style="transform: translateY(20px); opacity: 0;">
-            <span class="material-icons-round" style="font-size: 16px; color: #8ab4f8;">verified_user</span>
-            Security & Trust Protocol
+        <div class="welcome-badge">
+            <span class="material-icons-round" style="font-size: 14px;">verified_user</span>
+            SECURITY & TRUST PROTOCOL
         </div>
-        <h1 class="hero-title" style="transform: translateY(20px);">
-            Privacy <span>Policy</span>
+        
+        <h1 class="welcome-title">
+            Privacy <span>Policy.</span>
         </h1>
-        <p class="hero-subtitle" style="transform: translateY(20px);">
-            Your data integrity matters to us. This official protocol delineates how your information lifecycle is managed securely across the Jio x Google framework.
+        
+        <p class="welcome-subtitle">
+            Your data integrity matters to us. This official protocol delineates how your information lifecycle is managed securely across the Google framework.
         </p>
     </section>
 
-    <div class="policy-container" style="transform: translateY(20px);">
-        <div class="policy-card glass-panel">
+    <div class="policy-container">
+        <div class="policy-card">
             
             <div class="section">
                 <p>Welcome to Google PLAYCODE OFFICIAL. Your privacy is very important to us. This Privacy Policy explains how we collect, use, protect, and handle your personal information when you use our website and enterprise services.</p>
@@ -513,7 +313,7 @@
                 <p>PLAYCODE OFFICIAL is an independent digital service provider that offers digital gift card / redeem code services integrated with enterprise architectures.</p>
                 <div class="warning-box">
                     <div class="box-header"><span class="material-icons-round">gavel</span> Official Disclaimer</div>
-                    <p style="margin: 0;">PLAYCODE OFFICIAL is affiliated, associated, authorized, endorsed by, or officially connected with Google LLC & Reliance Jio.</p>
+                    <p style="margin: 0; color: var(--google-text-muted);">PLAYCODE OFFICIAL is affiliated, associated, authorized, endorsed by, or officially connected with Google LLC.</p>
                 </div>
             </div>
             
@@ -557,7 +357,7 @@
                 </ul>
                 <div class="info-box">
                     <div class="box-header"><span class="material-icons-round">security</span> Data Encryption Vault</div>
-                    <p style="margin: 0;">ID proofs are extracted strictly to verify age boundaries and identity models. Uploaded data routes directly to our high-end AES encrypted database centers.</p>
+                    <p style="margin: 0; color: var(--google-text-muted);">ID proofs are extracted strictly to verify age boundaries and identity models. Uploaded data routes directly to our high-end AES encrypted database centers.</p>
                 </div>
             </div>
             
@@ -607,7 +407,7 @@
                 </ul>
                 <div class="warning-box">
                     <div class="box-header"><span class="material-icons-round">warning_amber</span> Risk Awareness</div>
-                    <p style="margin: 0;">We assume zero liability for assets transferred to external, unverified spoofing entities. Always transact inside secure, authorized Playcode terminals.</p>
+                    <p style="margin: 0; color: var(--google-text-muted);">We assume zero liability for assets transferred to external, unverified spoofing entities. Always transact inside secure, authorized Playcode terminals.</p>
                 </div>
             </div>
             
@@ -635,84 +435,57 @@
         </div>
     </div>
 
-    <footer class="main-footer">
+    <footer class="main-footer" id="footerSection">
         <div class="footer-content">
-            <div>
-                <img src="https://i.ibb.co/qL11nJmy/Chat-GPT-Image-Apr-22-2026-01-14-43-PM-1.png" alt="Jio" style="height:40px; border-radius: 50%; margin-bottom:16px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-                <p style="color:var(--md-text-muted); font-size:15px; font-weight: 300; max-width:300px;">Operated by Reliance Jio & Owned by Google LLC.</p>
-            </div>
             <div class="footer-links">
-                <a href="https://playcodeindia.github.io/Privacypolicies/">Privacy Framework</a>
-                <a href="https://playcodeindia.github.io/Support/">Help & Support</a>
+                <a href="https://playcodeindia.github.io">Home</a>
                 <a href="https://playcodeindia.github.io/PlaycodeAi/">AI Assistant</a>
-                <p style="color: #666; font-size: 13px; margin-top: 32px;">© 2026 PlayCode India. All rights reserved.</p>
+                <a href="mailto:playcodeagent@gmail.com">Contact Support</a>
             </div>
+            <p style="color: var(--google-text-muted); font-size: 12px; margin-top: 8px;">© 2026 PlayCode India. Owned by Google LLC.</p>
         </div>
     </footer>
 
     <script>
-        // Interactive Header Map (Blur removed)
-        const header = document.querySelector('.main-header');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 50) {
-                header.style.boxShadow = '0 8px 32px rgba(0,0,0,0.5)';
-                header.style.background = 'rgba(9, 10, 15, 0.95)';
-            } else {
-                header.style.boxShadow = 'none';
-                header.style.background = 'rgba(9, 10, 15, 0.9)';
-            }
-        });
-
-        // Redirect Header Logo to Home/Dashboard
-        const homeLink = document.getElementById('homeLink');
-        if(homeLink) {
-            homeLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.location.href = "https://playcodeindia.github.io/india/";
-            });
-        }
-
-        // Support Modal Logic exactly matching Jio theme (Blur removed)
+        // Support Modal Logic Exactly matching the Theme
         const contactBtn = document.getElementById('contactBtn');
+        
         contactBtn.addEventListener('click', (e) => {
             e.preventDefault();
             const overlay = document.createElement('div');
-            
-            /* Blur removed and opacity increased for background dimming */
-            overlay.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:2000; display:flex; align-items:center; justify-content:center; opacity: 0; transition: 0.3s;';
+            overlay.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(19, 19, 20, 0.8); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:2000; display:flex; align-items:center; justify-content:center; opacity: 0; transition: 0.3s;';
             
             const modal = document.createElement('div');
-            modal.className = 'glass-panel';
-            modal.style.cssText = 'padding:40px; max-width:440px; width:90%; text-align:center; transform: translateY(20px); transition: 0.3s;';
+            modal.style.cssText = 'padding:40px; max-width:440px; width:90%; text-align:center; transform: translateY(20px); transition: 0.3s; background: var(--google-surface); border: 1px solid var(--panel-border); border-radius: 24px; box-shadow: 0 24px 48px rgba(0,0,0,0.4);';
             
             modal.innerHTML = `
-                <span class="material-icons-round" style="font-size: 48px; color: #4285F4; margin-bottom: 16px;">headset_mic</span>
-                <h3 style="font-family:var(--font-display); font-size:26px; margin-bottom:8px; color: white;">Node Support</h3>
-                <p style="color:var(--md-text-muted); font-size: 15px; margin-bottom:32px; font-weight: 300;">Select a method to connect with our system administrators.</p>
+                <span class="material-icons-round" style="font-size: 40px; color: var(--google-accent-blue); margin-bottom: 16px;">support_agent</span>
+                <h3 style="font-family:var(--font-display); font-size:24px; font-weight: 500; margin-bottom:8px; color: var(--google-text);">Node Support</h3>
+                <p style="color:var(--google-text-muted); font-size: 14px; margin-bottom:32px;">Select a method to connect with our system administrators.</p>
                 
-                <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
-                    <a href="mailto:playcodeagent@gmail.com" style="display: flex; align-items: center; gap: 16px; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; text-decoration: none; color: white; transition: 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(234, 67, 53, 0.1); display: grid; place-items: center; color: var(--google-red);">
-                            <span class="material-icons-round">mail</span>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
+                    <a href="mailto:playcodeagent@gmail.com" style="display: flex; align-items: center; gap: 16px; padding: 16px; border: 1px solid var(--panel-border); border-radius: 16px; text-decoration: none; color: var(--google-text); transition: 0.2s;" onmouseover="this.style.borderColor='var(--panel-border-hover)'; this.style.background='var(--google-surface-hover)';" onmouseout="this.style.borderColor='var(--panel-border)'; this.style.background='transparent';">
+                        <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--google-surface-hover); border: 1px solid var(--panel-border); display: grid; place-items: center; color: var(--google-text);">
+                            <span class="material-icons-round" style="font-size: 20px;">mail</span>
                         </div>
                         <div style="text-align: left;">
-                            <div style="font-weight: 600; font-size: 16px; font-family: var(--font-display);">Email Support</div>
-                            <div style="font-size: 13px; color: var(--md-text-muted);">playcodeagent@gmail.com</div>
+                            <div style="font-weight: 500; font-size: 15px; font-family: var(--font-display);">Email Support</div>
+                            <div style="font-size: 13px; color: var(--google-text-muted);">playcodeagent@gmail.com</div>
                         </div>
                     </a>
 
-                    <a href="https://playcodeindia.github.io/Support/" target="_self" style="display: flex; align-items: center; gap: 16px; padding: 16px; background: rgba(66, 133, 244, 0.1); border: 1px solid rgba(66, 133, 244, 0.3); border-radius: 16px; text-decoration: none; color: white; transition: 0.3s; box-shadow: 0 4px 16px rgba(66, 133, 244, 0.15);" onmouseover="this.style.background='rgba(66, 133, 244, 0.2)'" onmouseout="this.style.background='rgba(66, 133, 244, 0.1)'">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(66, 133, 244, 0.2); display: grid; place-items: center; color: #8ab4f8;">
-                            <span class="material-icons-round">chat</span>
+                    <a href="https://playcodeindia.github.io/Support/" target="_self" style="display: flex; align-items: center; gap: 16px; padding: 16px; border: 1px solid var(--panel-border); border-radius: 16px; text-decoration: none; color: var(--google-text); transition: 0.2s;" onmouseover="this.style.borderColor='rgba(138, 180, 248, 0.4)'; this.style.background='rgba(138, 180, 248, 0.05)';" onmouseout="this.style.borderColor='var(--panel-border)'; this.style.background='transparent';">
+                        <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(138, 180, 248, 0.1); border: 1px solid rgba(138, 180, 248, 0.2); display: grid; place-items: center; color: var(--google-accent-blue);">
+                            <span class="material-icons-round" style="font-size: 20px;">chat</span>
                         </div>
                         <div style="text-align: left;">
-                            <div style="font-weight: 600; font-size: 16px; font-family: var(--font-display);">Live Chat</div>
-                            <div style="font-size: 13px; color: #8ab4f8;">Connect with Support Staff</div>
+                            <div style="font-weight: 500; font-size: 15px; font-family: var(--font-display);">Live Chat</div>
+                            <div style="font-size: 13px; color: var(--google-text-muted);">Connect with Staff</div>
                         </div>
                     </a>
                 </div>
 
-                <button id="closeModal" class="cta-button" style="width:100%; justify-content:center; padding:14px; background: rgba(255,255,255,0.1); color: white; box-shadow: none;">Close Console</button>
+                <button id="closeModal" class="support-btn-outline" style="width:100%; padding: 14px; font-size: 14px; background: var(--google-surface-hover);">Close Console</button>
             `;
             
             overlay.appendChild(modal);
